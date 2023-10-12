@@ -4,21 +4,33 @@ const spanCounter = document.querySelector('#value');
 
 const btnClickDecrement = document.querySelector('button[data-action="decrement"]');
 
-console.dir(btnClickDecrement);
-
-console.dir(spanCounter);
-
 const btnClickIncrement = document.querySelector('button[data-action="increment"]');
 
-console.log(btnClickIncrement);
+console.dir(btnClickDecrement);
 
-btnClickDecrement.addEventListener('klick', handlerClick);
+console.log(spanCounter.textContent);
 
-function handlerClick(event) {
+console.dir(btnClickIncrement);
+
+btnClickDecrement.addEventListener('click', handlerClick);
+
+function handlerClick() {
     counterValue -= 1;
 
     spanCounter.textContent = counterValue;
+
+    console.log(spanCounter.textContent);
+}
+
+btnClickIncrement.addEventListener('click', handlerIncClick);
+
+function handlerIncClick() {
+    counterValue += 1;
+
+    spanCounter.textContent = counterValue;
+
+    console.log(spanCounter.textContent);
 }
 
 
-// console.log(counterValue);
+
